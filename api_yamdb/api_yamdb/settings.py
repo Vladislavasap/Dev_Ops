@@ -69,7 +69,7 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
         'NAME': os.getenv('DB_NAME'),
         'USER': os.getenv('POSTGRES_USER'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
@@ -77,10 +77,6 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT')
     }
 }
-
-if 'test' in sys.argv or 'test\_coverage' in sys.argv:  # Covers regular testing and django-coverage
- DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
- DATABASES['default']['NAME'] = ':memory:'
 
 # Password validation
 
