@@ -43,8 +43,9 @@ jobs:
             password: ${{ secrets.DOCKER_PASSWORD }} 
         - name: Push to Docker Hub
           # Пуш образа в Docker Hub 
-          uses: docker/build-push-action@v2 
+          uses: docker/build-push-action@v2
           with:
+            file: ./api_yamdb/Dockerfile
             push: true
             tags: laddis/yamdb_final:01.04.2023
   deploy:
