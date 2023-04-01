@@ -9,7 +9,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: laddis/api_yambd:latest
+    image: laddis/yamdb_final:latest
     restart: always
     volumes:
 
