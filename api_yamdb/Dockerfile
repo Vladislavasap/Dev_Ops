@@ -1,7 +1,7 @@
 FROM python:3.7-slim
 
 
-WORKDIR /app
+WORKDIR /app/api_yambd/
 
 
 COPY requirements.txt /app
