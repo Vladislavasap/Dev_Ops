@@ -79,9 +79,9 @@ DATABASES = {
 }
 
 
-if 'test' in sys.argv or 'test\_coverage' in sys.argv:   # Covers regular testing and django-coverage
- DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
- DATABASES['default']['NAME'] = ':memory:'
+if 'test' in sys.argv or r'test\_coverage' in sys.argv:   # Covers regular testing and django-coverage
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
+    DATABASES['default']['NAME'] = ':memory:'
 # Password validation
 
 AUTH_PASSWORD_VALIDATORS = [
