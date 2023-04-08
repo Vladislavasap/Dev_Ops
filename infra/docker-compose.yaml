@@ -13,7 +13,7 @@ services:
     restart: always
     volumes:
 
-      - static_value:/app/static/
+      - static_value:/app/api_yamdb/static/
 
       - media_value:/app/media/
 
